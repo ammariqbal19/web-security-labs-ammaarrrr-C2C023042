@@ -1,0 +1,67 @@
+/* Simple, clean login styles */
+html,body{
+    height:100%;
+    margin:0;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: linear-gradient(135deg,#f5f7fb,#e9eef8);
+}
+
+.login-container{
+    width:100%;
+    max-width:380px;
+    margin:40px auto;
+    padding:24px;
+    background:#fff;
+    border-radius:10px;
+    box-shadow: 0 8px 30px rgba(20,30,60,0.08);
+    box-sizing:border-box;
+}
+
+.login-form h3{
+    margin:0 0 12px;
+    text-align:center;
+    color:#1f2937;
+    font-size:20px;
+}
+
+.input{
+    width:100%;
+    padding:10px 12px;
+    margin:8px 0;
+    border:1px solid #d6e0f3;
+    border-radius:6px;
+    font-size:14px;
+    background:#fbfdff;
+    box-sizing:border-box;
+}
+
+.input:focus{
+    outline:none;
+    border-color:#7aa3ff;
+    box-shadow:0 0 0 3px rgba(122,163,255,0.12);
+}
+
+.btn{
+    width:100%;
+    padding:10px 12px;
+    margin-top:10px;
+    border:0;
+    border-radius:6px;
+    background:#2b6cdf;
+    color:#fff;
+    font-weight:600;
+    cursor:pointer;
+    font-size:15px;
+}
+
+.btn:hover{ background:#2457b8; }
+
+.error{
+    color:#922b21;
+    background:#fdecec;
+    padding:8px 10px;
+    border-radius:6px;
+    margin:8px 0;
+    text-align:center;
+    font-size:13px;
+}
