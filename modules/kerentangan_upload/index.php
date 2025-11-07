@@ -184,6 +184,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div class="footer small">
             <p>Belum punya akun? <a href="register.php" class="text-link">Daftar sekarang</a></p>
+            <p><a href="../../dashboard.php" class="text-link">Kembali ke Dashboard</a></p> <!-- Tombol Kembali ke Dashboard -->
         </div>
     </div>
 </body>

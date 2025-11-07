@@ -140,6 +140,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
 
         <p>Sudah punya akun? <a href="index.php">Login</a></p>
+        <p><a href="../../dashboard.php" class="text-link">Kembali ke Dashboard</a></p> <!-- Tombol Kembali ke Dashboard -->
     </div>
 </body>
 </html>

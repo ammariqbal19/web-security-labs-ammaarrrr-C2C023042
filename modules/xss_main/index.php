@@ -32,9 +32,166 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
   <title>Register — Lab</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { background: linear-gradient(120deg,#f8f9fa 0%, #e9eef8 100%); min-height:100vh; }
-    .card-register { max-width:420px; margin:70px auto; border-radius:12px; box-shadow:0 8px 30px rgba(16,24,40,0.08); }
-    .brand { width:72px; height:72px; border-radius:10px; display:inline-flex; align-items:center; justify-content:center; background:#fff; box-shadow:0 4px 12px rgba(16,24,40,0.06); font-weight:700; font-size:20px; color:#198754; }
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
+        color: #e0efff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .card-register {
+        background-color: #1e2a3a;
+        padding: 30px 40px;
+        border-radius: 12px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+        width: 100%;
+        max-width: 420px;
+        color: #dce9ff;
+    }
+
+    .brand {
+        width: 72px;
+        height: 72px;
+        border-radius: 10px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(135deg, #3498db, #2980b9);
+        box-shadow: 0 4px 12px rgba(13, 110, 253, 0.4);
+        font-weight: 700;
+        font-size: 20px;
+        color: white;
+        margin-bottom: 10px;
+    }
+
+    h4.card-title {
+        color: #5dade2;
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+
+    small.text-muted {
+        color: #a7c7ff !important;
+    }
+
+    .form-label {
+        color: #9ecbff;
+        font-weight: 600;
+    }
+
+    .form-control {
+        background-color: #243447;
+        border: 1px solid #34495e;
+        border-radius: 8px;
+        color: #e0efff;
+        padding: 10px;
+        font-size: 15px;
+        transition: border-color 0.3s, background-color 0.3s;
+    }
+
+    .form-control:focus {
+        border-color: #3498db;
+        background-color: #2c3e50;
+        outline: none;
+        color: #ffffff;
+    }
+
+    /* warna placeholder */
+    .form-control::placeholder {
+        color: #87aee6;
+        opacity: 1;
+    }
+
+    .btn-success {
+        background-color: #3498db !important;
+        border: none;
+        color: white;
+        font-weight: 600;
+        padding: 12px;
+        border-radius: 8px;
+        transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .btn-success:hover {
+        background-color: #2980b9 !important;
+        transform: translateY(-2px);
+    }
+
+    .alert {
+        border-radius: 8px;
+        padding: 10px 12px;
+        margin-bottom: 15px;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .alert-success {
+        background-color: rgba(52, 152, 219, 0.15);
+        color: #76c7ff;
+        border: 1px solid rgba(52, 152, 219, 0.3);
+    }
+
+    .alert-danger {
+        background-color: rgba(231, 76, 60, 0.15);
+        color: #ff9b92;
+        border: 1px solid rgba(231, 76, 60, 0.3);
+    }
+
+    .card-footer {
+        background-color: transparent;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        padding-top: 10px;
+        font-size: 13px;
+        color: #9ecbff;
+        text-align: center;
+    }
+
+    a {
+        color: #5dade2;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+    a:hover {
+        color: #82caff;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+
+    .small {
+        font-size: 13px;
+        color: #b7d3ff;
+    }
+
+    .back-btn {
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        padding: 10px 0;
+        background: #0d6efd;
+        color: #fff;
+        border-radius: 8px;
+        font-weight: 700;
+        margin-top: 18px;
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .back-btn:hover {
+        background: #0b5ed7;
+        transform: translateY(-2px);
+    }
   </style>
 </head>
 <body>
@@ -74,8 +231,11 @@ if($_SERVER['REQUEST_METHOD']==='POST'){
       <div class="text-center mt-3">
         <span class="small">Sudah punya akun? <a href="login.php">Login</a></span>
       </div>
+
+      <a href="../../dashboard.php" class="back-btn">⬅ Kembali</a>
     </div>
-    <div class="card-footer text-center small text-muted">
+
+    <div class="card-footer text-center small">
       ⚠️ Lab demo: password disimpan plaintext. Produksi harus gunakan <code>password_hash()</code>.
     </div>
   </div>
